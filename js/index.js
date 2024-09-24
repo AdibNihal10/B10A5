@@ -73,12 +73,15 @@ document.getElementById("historyBtn").addEventListener("click", function () {
 //donation section
 document.getElementById("donate").addEventListener("click", function (event) {
   event.preventDefault();
-  getInputValue(
+  const result = getInputValue(
     "donationamount",
     "totalAmount",
     "donatedAmount",
     "card-title2"
   );
+  if (result) {
+    document.getElementById("my_modal_5").showModal();
+  }
 });
 
 document.getElementById("Feni-btn").addEventListener("click", function (event) {

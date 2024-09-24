@@ -51,7 +51,7 @@
         </div>
         <div class="flex py-8 items-center justify-center gap-4">
             <button id="donationBtn" class="lexend-font py-4 px-8 rounded-lg bg-[#B4F461]">Donation</button>
-            <button onclick="backgroundColor()" id="historyBtn"
+            <button id="historyBtn"
                 class="lexend-font py-4 px-8 rounded-lg bg-btn-primary border text-btn-color">History</button>
         </div>
     </header>
@@ -255,18 +255,26 @@
     <footer>
 
     </footer>
-    <input type="checkbox" id="my_modal_6" class="modal-toggle" />
-    <div class="modal" role="dialog">
-        <div class="modal-box">
-            <h3 class="text-lg font-bold">Hello!</h3>
-            <p class="py-4">This modal works with a hidden checkbox!</p>
-            <div class="modal-action">
-                <label for="my_modal_6" class="btn">Close!</label>
+
+    <!-- Put this part before </body> tag -->
+
+
+    <dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle">
+        <div class="modal-box text-center">
+            <h3 class="text-[32px] font-bold">Congratulations!</h3>
+            <i class="fa-solid fa-dollar-sign bg-yellow-300 mt-4"></i>
+            <p class="py-4 lexend-font font-normal">You have donated for humankind <br> <span
+                    class="font-bold lexend-font">Successfully</span></p>
+            <div class="modal-action flex justify-center">
+                <form method="dialog">
+                    <!-- if there is a button in form, it will close the modal -->
+                    <button class="lexend-font py-4 px-8 rounded-lg bg-btn-primary border text-btn-color">Close
+                        Confirmation</button>
+                </form>
             </div>
         </div>
-    </div>
+    </dialog>
     <script src="js/index.js"></script>
-
 </body>
 
 </html>
