@@ -87,10 +87,43 @@ document.getElementById("donate").addEventListener("click", function (event) {
 document.getElementById("Feni-btn").addEventListener("click", function (event) {
   event.preventDefault();
 
-  getInputValue("Feni-donation", "totalAmount", "feni-donated", "card-title1");
+  const result = getInputValue(
+    "Feni-donation",
+    "totalAmount",
+    "feni-donated",
+    "card-title1"
+  );
+
+  if (result) {
+    document.getElementById("my_modal_5").showModal();
+  }
 });
 document.getElementById("Quota").addEventListener("click", function (event) {
   event.preventDefault();
 
-  getInputValue("quota-Amount", "totalAmount", "quota-donated", "card-title3");
+  const result = getInputValue(
+    "quota-Amount",
+    "totalAmount",
+    "quota-donated",
+    "card-title3"
+  );
+  if (result) {
+    document.getElementById("my_modal_5").showModal();
+  }
+});
+
+document.addEventListener("scroll", function () {
+  const inDiv = document.getElementById("divclass");
+
+  if (document.documentElement.scrollTop > 50) {
+    inDiv.classList.remove(
+      "bg-gradient-to-r",
+      "from-cyan-200",
+      "to-yellow-200"
+    );
+    inDiv.classList.add("bg-opacity-0");
+  } else {
+    inDiv.classList.add("bg-gradient-to-r", "from-cyan-200", "to-yellow-200");
+    inDiv.classList.remove("bg-opacity-0");
+  }
 });
